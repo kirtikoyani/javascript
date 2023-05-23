@@ -28,6 +28,17 @@ test();
 console.log(test);
 console.log(typeof(test));
 
+var test = 1;
+function functionHoisting() {
+  //function Hoisting, test is re-defined and re-declared so that remain into it's function block
+  //  function test() {}
+  // if test fun is not define into this function so that this test variable Accessible as a global variable outside functionHoisting() function
+  test = 10;
+  return;
+  function test() {}
+}
+functionHoisting();
+console.log(test);
 
 // var test = 1;
 
@@ -127,9 +138,11 @@ console.log(y); // ['foo2']
 let kirti='koyani';
 function hello(){
     let kirti = 89;
-    console.log(kirti);
+    // console.log(kirti);
+    return kirti;
 }
 hello();
+console.log(hello(),'llll');
 console.log(kirti);
 // Question: What happens if you try to redeclare a
 // variable in an inner block that was already declared in an outer block using var, let, and const?
