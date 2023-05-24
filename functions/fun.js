@@ -89,3 +89,16 @@ const counter = createCounter(-4);
 console.log(counter());
 console.log(counter());
 console.log(counter());
+
+// JS uses callbacks all the time
+const high5 = function () {
+  console.log('👋');
+};
+
+let btn1 = document.getElementsByClassName("btn1")[0]; // Select the first element
+
+btn1.addEventListener('click', high5);
+const high5employee = function (ele) {
+  console.log(ele,'👋');
+};
+['Jonas', 'Martha', 'Adam'].forEach(high5employee);
