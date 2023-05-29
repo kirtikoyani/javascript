@@ -36,3 +36,19 @@ for (let i = 0; i < str.length; i++) {
   else result.push(str[i]);
 }
 console.log(result.join(""));
+
+// sorting second last ele
+// function processData(myArray) {
+// let newArray = myArray.split(' ');
+// var second = newArray.sort(function(a,b){return b-a});
+//     const set = new Set(second);
+//     const array = [...set]
+//     console.log(array[1])
+// }
+// processData('2 3 5 34 5 88 88');
+//  sortcut
+function processData(myArray) {
+  const secLastEle = [...new Set(myArray.sort((a,b)=>{return b-a}))][1];
+  console.log(secLastEle)
+  }
+  processData([2, 3, 5, 34, 5, 88, 88]);

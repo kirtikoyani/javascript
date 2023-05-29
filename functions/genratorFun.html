@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>genrator function</h1>
+    <h4>gwt daynamic id: <span id="newId">0</span></h4>
+    <button onclick="getId()">Generate Id :</button>
+    <script>
+      function* simpalGen() {
+        let x = 100;
+        yield x;
+        yield 300;
+        let y = "kirti";
+        yield y;
+        // yeild represent point for execute code at a time
+      }
+      let sG = simpalGen();
+      console.log(sG.next());
+      console.log(sG.next());
+      console.log(sG.next());
+      console.log(sG.next());
+
+      function* genrateId() {
+        let i = 1;
+        while (true) {
+        //   i++;
+          yield i++;
+        }
+      }
+      let gI= genrateId();
+      function getId(){
+        document.getElementById('newId').innerText=gI.next().value;
+      }
+    </script>
+  </body>
+</html>
