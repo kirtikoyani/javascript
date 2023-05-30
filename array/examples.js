@@ -48,7 +48,28 @@ console.log(result.join(""));
 // processData('2 3 5 34 5 88 88');
 //  sortcut
 function processData(myArray) {
-  const secLastEle = [...new Set(myArray.sort((a,b)=>{return b-a}))][1];
-  console.log(secLastEle)
-  }
-  processData([2, 3, 5, 34, 5, 88, 88]);
+  const secLastEle = [
+    ...new Set(
+      myArray.sort((a, b) => {
+        return b - a;
+      })
+    ),
+  ][1];
+  console.log(secLastEle);
+}
+processData([2, 3, 5, 34, 5, 88, 88]);
+
+// reduce method that getting one array
+const message = [
+  {name:'kirti',age:20},
+  {name:'prince',age:18},
+  {name:'chapri',age:22},
+  {name:'chibu',age:21},
+]
+
+var stored = message.reduce(function(providedValue, currentValue, currentIndex){
+providedValue.push(currentValue.age);
+//   console.log("providedValue: ", providedValue);
+return providedValue;
+}, []);
+console.log(stored);
