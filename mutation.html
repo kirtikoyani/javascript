@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 50px;
+        font-weight: 900;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div contenteditable style="background-color: brown">span 1</div>
+      <div contenteditable style="background-color: gray">span 2</div>
+      <div contenteditable style="background-color: yellowgreen">span 3</div>
+    </div>
+    <button>Delete Div</button>
+    <script>
+      let observer = new MutationObserver((data) => {
+        console.log(data);
+      });
+      observer.observe(elem, {
+        childList: true,
+      });
+    </script>
+  </body>
+</html>

@@ -11,3 +11,8 @@ Object.keys(acc).includes(curr) ? {...acc, [curr.toLowerCase()] :
 acc[curr] + 1} : {...acc, [curr. toLowerCase()]: 1} , {})
 const count = Object.entries(arr1). sort((a, b) => b[1] - a[1])
 console.log(count)
+
+
+const arr2=['a','b','c','d'];
+let obj =arr2.reduce((a,it,i)=>({...a,[i]:it}),{})
+console.log(obj);
