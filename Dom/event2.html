@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Click in here
+<br>
+and press a key.
+<input type="text" title="keydown" onkeydown="keydown(this.value)" value="">
+<p id="ptag"></p>
+<script>
+    document.addEventListener("keydown", function(event) {
+
+  console.log(event);
+
+//   document.body.innerHTML = `
+//   <br>
+//     <b>which: ${event.which}</b>
+//     <br>
+//     <b>keyCode:</b> ${event.keyCode}
+//     <br>
+//     <b>shiftKey:</b> ${event.shiftKey}
+//     <br>
+//     <b>altKey:</b> ${event.altKey}
+//     <br>
+//     <b>ctrlKey:</b> ${event.ctrlKey}
+//     <br>
+//     <b>metaKey:</b> ${event.metaKey}
+//     <br>
+//     <b>key:</b> ${event.key}
+//   `;
+
+});
+function keydown(event) {
+
+console.log(event);
+document.getElementById('ptag').innerHTML = event
+}
+</script>
+</body>
+</html>

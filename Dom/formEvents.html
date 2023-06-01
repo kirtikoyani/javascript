@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="">Blur Event:</label>
+      <input
+        type="text"
+        id="fnm"
+        name=""
+        placeholder="blur event"
+        onblur="Functa()"
+      />
+      <p>
+        When the focus is away from a form element, the input text gets
+        converted into upper case
+      </p>
+    </div>
+    <div>
+      <label for="chnage">Onchange Event:</label>
+
+      <select
+        name="change"
+        title="chnage"
+        id="subjects"
+        onchange="prefrrdsubjects()"
+      >
+        <option value="Chemistry">Chemistry</option>
+        <option value="Physics">Physics</option>
+        <option value="Maths">Maths</option>
+      </select>
+    </div>
+    <div>
+      Display text:
+      <input
+        title="select"
+        type="text"
+        value="Welcome Educba!"
+        onselect="Function5th()"
+      />
+      <p id="demo1"></p>
+    </div>
+    <div>
+      <form onreset="mess_reset()">
+        Enter your name: <input title="reset" type="text" size="20" />
+        <input type="reset" />
+      </form>
+    </div>
+    <script>
+      function Functa() {
+        var p = document.getElementById("fnm");
+        p.value = p.value.toUpperCase();
+        p.style.backgroundColor = "red";
+      }
+      function prefrrdsubjects() {
+        let prefer = document.getElementById("subjects").value;
+        // prefer = document.forms[0];
+        console.log(prefer);
+        alert("subjects which are most liked and preferred is " + prefer);
+      }
+      function function5th() {
+        document.getElementById("demo1").innerHTML = "select text to display";
+      }
+      function mess_reset() {
+        alert(
+          "This event is used to trigger the event where user clicks on reset button"
+        );
+      }
+    </script>
+  </body>
+</html>

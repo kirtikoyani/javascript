@@ -55,6 +55,16 @@ function car(){
 const myCar = new car();
 console.log(myCar); // { make: 'kia' }
 
+const shape = {
+    radius: 10,
+    diameter() {
+      return this.radius * 2;
+    },
+    perimeter: () => 2 * Math.PI * this.radius,
+  };
+  console.log(shape.diameter()); // 20
+  console.log(shape.perimeter()); // NaN
+
 
 /********* function *********/
 
@@ -84,6 +94,14 @@ console.log(sum(...[1,2,3])); // 6
 })();
 console.log(typeof x,'x : X is not define error'); // undefined x : X is not define error
 console.log(typeof y,'y :',y); // number y : 20
+
+let obj ={
+    radius:20
+}
+
+let arrowFun = () => 2 * Math.PI * this.radius;
+
+console.log(arrowFun()) // NaN
 
 /********* string *********/
 
@@ -115,7 +133,7 @@ const str1 ='helllo i am kitty';
 console.log(!typeof str1 === Object); // false
 console.log(!typeof str1 === String); // false
 console.log(!typeof str1 === false); // true
-
+console.log(undefined * 2  + 387845); //NaN
 
 const data2 = 3 + 4 + '6';
 console.log(typeof data2,data2);//string 76

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .change_eff {
+        background-color: gray;
+        padding: 50px;
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="change_eff">Hello</div>
+      <button onclick="clickevent()">Click</button>
+      <button onmouseover="mouseoverevent()">mouseover</button>
+      <button onmouseout="mouseoutevent()">mouseout</button>
+      <button onmouseup="mouseoutevent()">mouseup</button>
+      <button onmousemove="mousemove()">mousemove</button>
+    </div>
+    <br />
+    <div>
+      <label for="event">key events</label>
+      <input
+        placeholder="Click here, then press down a key."
+        size="40"
+        onkeydown="keydown(this.value)"
+        value=""
+      />
+      <p id="keydown"></p>
+    </div>
+    <div>
+      <label for="event">key events</label>
+      <input
+        placeholder="Click here, then press down a key."
+        size="40"
+        onkeyup="keyup(this.value)"
+        value=""
+      />
+      <p id="keyup"></p>
+    </div>
+    <script>
+      function clickevent() {
+        document.querySelector(".change_eff").style.backgroundColor = "red";
+        document.querySelector(".change_eff").innerText = "Click";
+      }
+      function mouseoverevent() {
+        document.querySelector(".change_eff").style.backgroundColor = "green";
+        document.querySelector(".change_eff").innerText = "mouseover";
+      }
+      function mouseoutevent() {
+        document.querySelector(".change_eff").style.backgroundColor = "yellow";
+        document.querySelector(".change_eff").innerText = "mouseout";
+      }
+      function mouseupevent() {
+        document.querySelector(".change_eff").style.backgroundColor = "aqua";
+        document.querySelector(".change_eff").innerText = "mouseup";
+      }
+      function mousemove() {
+        document.querySelector(".change_eff").style.backgroundColor = "pink";
+        document.querySelector(".change_eff").innerText = "mousemove";
+      }
+      function mousemove() {
+        document.querySelector(".change_eff").style.backgroundColor = "pink";
+        document.querySelector(".change_eff").innerText = "mousemove";
+      }
+      function keydown(event) {
+        console.log(event);
+        document.getElementById("keydown").innerHTML = event;
+      }
+      function keyup(event) {
+        console.log(event);
+        document.getElementById("keyup").innerHTML = event;
+      }
+    </script>
+  </body>
+</html>
