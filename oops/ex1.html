@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>account form</h2>
+    <form action="" id="accountform">
+      <input type="text" placeholder="customer name" id="customername" />
+      <input type="number" placeholder="Initial balance" id="balance" />
+      <button type="submit">Create Account</button>
+    </form>
+    <hr />
+    <h2>deposite form</h2>
+    <form action="" id="depositform">
+      <input type="number" placeholder="account number" id="accountnum" />
+      <input type="number" placeholder="Amount" id="amount" />
+      <button type="submit">Deposite</button>
+    </form>
+    <hr />
+
+    <script>
+      function BankAccount(customerName, balance = 0) {
+        this.customerName = customerName;
+        this.accountNumber = Date.now();
+        this.balance = balance;
+        this.deposit = function (amount) {
+          this.balance += amount;
+        };
+        this.widrow = function (amount) {
+          this.balance -= amount;
+        };
+      }
+      // const rakeshAccount = new BankAccount('Rakesh K', 1000);
+      // const johnaccount = new BankAccount ("John Doe");
+      // rakeshAccount.deposit(5000);
+      // johnaccount.deposit(1000);
+      // console.log(rakeshAccount);
+      // console.log(johnaccount);
+      // rakeshAccount.widrow(4400);
+      // johnaccount.widrow(500);
+
+      let accounts = [];
+      const accountform = document.querySelector("#accountform");
+      const customerName = document.querySelector("#customername");
+      const balance = document.querySelector("#balance");
+      accountform.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const account = new BankAccount(customerName.value, +balance.value);
+        accounts.push(account);
+        console.log(accounts);
+      });
+
+      const depositeform = document.querySelector("#depositform");
+      const accountnum = document.querySelector("#accountnum");
+      const amount = document.querySelector("#amount");
+      depositeform.addEventListener("submit", (e) => {
+        e.preventDefault();
+        accounts.find();
+        return;
+      });
+    </script>
+  </body>
+</html>
