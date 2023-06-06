@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <link href="dist/output.css" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #edf2f7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h-screen overflow-hidden flex items-center justify-center">
+      <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
+          ></div>
+          <div
+            class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20"
+          >
+            <div class="max-w-md w-80 mx-auto">
+              <div>
+                <h1 class="text-2xl font-semibold">Form Task</h1>
+              </div>
+              <div class="divide-gray-200">
+                <form action="">
+                  <div class="py-8 text-sm space-y-2 leading-6 text-gray-700">
+                    <!-- space-y-4 -->
+                    <div class="relative">
+                      <label
+                        for="name"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                        >Product Name</label
+                      >
+                      <input
+                        autocomplete="off"
+                        id="name"
+                        name="name"
+                        type="text"
+                        class="peer placeholder-transparent my-4 h-10 w-full border border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="price"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-base"
+                        >Price</label
+                      >
+                      <input
+                        autocomplete="off"
+                        id="price"
+                        name="price"
+                        type="text"
+                        class="peer placeholder-transparent my-4 h-10 w-full border border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="price"
+                        required
+                      />
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="color"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-base"
+                        >Color</label
+                      >
+                      <select
+                        autocomplete="off"
+                        id="color"
+                        name="color"
+                        title="color"
+                        required
+                        class="peer h-10 w-full border my-4 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                      >
+                        <option value="" class="text-sm" disabled selected>
+                          Select Product Color
+                        </option>
+                        <option value="Black" class="text-sm">Black</option>
+                        <option value="White" class="text-sm">
+                          White
+                        </option>
+                        <option value="Navy Blue" class="text-sm">Navy Blue</option>
+                        <option value="Shinee green" class="text-sm">Shinee green</option>
+                        <option value="Sky blue" class="text-sm">Sky blue</option>
+                        <option value="Golden" class="text-sm">Golden</option>
+                        <option value="Silver" class="text-sm">Silver</option>
+                      </select>
+                    </div>
+                    <div class="relative flex mx-auto">
+                      <label
+                        for="category"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-base"
+                        >Category</label
+                      >
+                      <div class="flex items-center my-2">
+                        <label for="mac" class="pr-2">Mac</label>
+                        <input
+                          autocomplete="off"
+                          id="mac"
+                          name="mac"
+                          type="radio"
+                          required
+                          class="peer placeholder-transparent h-10 w-full text-gray-900 focus:outline-none focus:borer-rose-600"
+                        />
+                      </div>
+                      <div class="flex items-center mx-auto">
+                        <label for="mac2" class="px-2">Android</label>
+                        <input
+                          autocomplete="off"
+                          id="mac2"
+                          name="mac"
+                          type="radio"
+                          class="peer placeholder-transparent h-10 w-full text-gray-900 focus:outline-none focus:borer-rose-600"
+                        />
+                      </div>
+                    </div>
+                    <div class="relative">
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        title="checkbox"
+                        name="checkbox"
+                        required
+                      />
+                      <label for="checkbox" class="px-2"
+                        >i agree with all details</label
+                      >
+                    </div>
+                  </div>
+                  <div class="relative flex mx-auto">
+                    <!-- <input type="submit" class="bg-blue-500 text-white rounded-md px-2 py-1" value="Submit" > -->
+                    <button
+                      type="reset"
+                      class="bg-blue-500 text-white rounded-md px-2 py-1"
+                    >
+                      Reset
+                    </button>
+                    <button
+                      type="submit"
+                      class="bg-blue-500 text-white rounded-md px-2 py-1 mx-auto mr-0"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- table  -->
+
+    <div
+      class="relative overflow-x-auto py-8 px-8 w-fit shadow-md sm:rounded-lg border border-blue-500 bg-white mx-auto"
+    >
+      <div class="relative max-w-xs mb-6">
+        <label for="hs-table-search" class="sr-only">Search</label>
+        <input
+          type="text"
+          name="hs-table-search"
+          id="hs-table-search"
+          class="p-3 pl-10 block w-full border border-blue-500 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 light:border-blue-700 light:text-gray-400"
+          placeholder="Search for items"
+        />
+        <div
+          class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-4"
+        >
+          <svg
+            class="h-3.5 w-3.5 text-gray-400"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <table
+        class="w-80 text-sm text-left text-gray-500 light:text-gray-400 border border-blue-500 mx-auto"
+      >
+        <thead class="text-xs uppercase bg-blue-500 text-white">
+          <tr>
+            <th scope="col" class="px-6 py-3">Product name</th>
+            <th scope="col" class="px-6 py-3">Color</th>
+            <th scope="col" class="px-6 py-3">Category</th>
+            <th scope="col" class="px-6 py-3">Price</th>
+            <th scope="col" class="px-6 py-3">Edit</th>
+            <th scope="col" class="px-6 py-3">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="bg-white border-b light:bg-gray-800 light:border-gray-700 hover:bg-gray-50 light:hover:bg-gray-600 border border-blue-500"
+          >
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap light:text-white"
+            >
+              Apple MacBook Pro 17"
+            </th>
+            <td class="px-6 py-4">Silver</td>
+            <td class="px-6 py-4">Laptop</td>
+            <td class="px-6 py-4">$2999</td>
+            <td class="px-6 py-4 text-right">
+              <a
+                href="#"
+                class="font-medium text-blue-600 light:text-blue-500 hover:underline"
+                >Edit</a
+              >
+            </td>
+            <td class="px-6 py-4 text-right">
+              <a
+                href="#"
+                class="font-medium text-red-600 light:text-blue-500 hover:underline"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          <!-- <tr class="bg-white border-b light:bg-gray-800 light:border-gray-700 hover:bg-gray-50 light:hover:bg-gray-600 border border-blue-500">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap light:text-white">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                    $1999
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Edit</a>
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-red-600 light:text-blue-500 hover:underline">Delete</a>
+                </td>
+            </tr>
+            <tr class="bg-white light:bg-gray-800 hover:bg-gray-50 light:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap light:text-white">
+                    Magic Mouse 2
+                </th>
+                <td class="px-6 py-4">
+                    Black
+                </td>
+                <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
+                    $99
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Edit</a>
+                </td>
+				<td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Delete</a>
+                </td>
+            </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

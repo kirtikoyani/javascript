@@ -5,7 +5,7 @@ let student ={
     firstname:'kirti',
     lastname:'koyani',
     age:20,
-    getEmail:getEmail(this.firstname,this.lastname)
+    // getEmail:getEmail(this.firstname,this.lastname)
 }
 let teacher ={
     firstname:'amish',
@@ -13,4 +13,5 @@ let teacher ={
     age:24,
     getEmail:getEmail(this.firstname,this.lastname)
 }
-console.log(student.getEmail)
+// console.log(student.getEmail)
+console.log(getEmail.call(student));
