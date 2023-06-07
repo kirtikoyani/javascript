@@ -1,0 +1,10 @@
+import './indentifier.mjs';
+import './displayForm.mjs';
+import './addProduct.mjs';
+import './displayProduct.mjs';
+import './editProduct.mjs';
+import './updateProduct.mjs';
+import './closePopup.mjs';
+import './deleteProduct.mjs';
+import './searchProduct.mjs';
+import './emptyForm.mjs';
