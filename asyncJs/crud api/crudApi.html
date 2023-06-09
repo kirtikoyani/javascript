@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="h-screen overflow-hidden flex items-center justify-center" id="form_parent">
+      <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"
+            id="parent_div"
+          ></div>
+          <div
+            class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20"
+            id="child_div"
+          >
+            <div class="max-w-md w-80 mx-auto">
+              <div class="flex mx-auto">
+                <h1 class="text-2xl font-semibold" id="formTitle"></h1>
+                <button type="button" id="close" class="mr-0 mx-auto px-2 border-blue-500 border rounded-full" onclick="close_popup()">
+                  &times;
+                </button>
+              </div>
+              <div class="divide-gray-200">
+                <form
+                  action=""
+                  name="myForm"
+                  method="post"
+                  onsubmit="saveData()"
+                >
+                  <!-- <button type="button" id="close" onclick="close_popup()">
+                    &times;
+                  </button> -->
+                  <div class="py-8 text-sm space-y-2 leading-6 text-gray-700">
+                    <!-- space-y-4 -->
+                    <div class="relative">
+                      <label
+                        for="fname"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
+                        >First Name</label
+                      >
+                      <input
+                        autocomplete="off"
+                        id="fname"
+                        name="fname"
+                        type="text"
+                        class="peer placeholder-transparent my-4 h-10 w-full border border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="lname"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-base"
+                        >Last Name</label
+                      >
+                      <input
+                        autocomplete="off"
+                        id="lname"
+                        name="lname"
+                        type="text"
+                        class="peer placeholder-transparent my-4 h-10 w-full border border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="lname"
+                        required
+                      />
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="email"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-base"
+                        >Email</label
+                      >
+                      <input
+                        autocomplete="off"
+                        id="email"
+                        name="email"
+                        type="Email"
+                        class="peer placeholder-transparent my-4 h-10 w-full border border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="email"
+                        required
+                      />
+                    </div>
+                    <div class="relative">
+                      <label
+                        for="img"
+                        class="absolute left-0 -top-3.5 text-gray-600 text-base peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-base"
+                        >Img URL</label
+                      >
+                      <input
+                        autocomplete="off"
+                        id="img"
+                        name="img"
+                        type="text"
+                        class="peer placeholder-transparent my-4 h-10 w-full border border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
+                        placeholder="img"
+                        required
+                      />
+                    </div>
+                    <div class="relative">
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        title="checkbox"
+                        name="checkbox"
+                        required
+                      />
+                      <label for="checkbox" class="px-2"
+                        >i agree with all details</label
+                      >
+                    </div>
+                  </div>
+                  <div class="relative flex mx-auto">
+                    <!-- <input type="submit" class="bg-blue-500 text-white rounded-md px-2 py-1" value="Submit" > -->
+                    <button
+                      type="reset"
+                      class="bg-blue-500 text-white rounded-md px-2 py-1"
+                    >
+                      Reset
+                    </button>
+                    <button
+                      type="submit"
+                      id="submit"
+                      class="bg-blue-500 text-white rounded-md px-2 py-1 mx-auto mr-0"
+                    >
+                      Submit
+                    </button>
+                    <button
+                      type="submit"
+                      onsubmit="update()"
+                      id="updatebtn"
+                      class="bg-blue-500 text-white rounded-md px-2 py-1 mx-auto mr-0"
+                    >
+                      Update
+                    </button>
+                    <input type="hidden" id="store_index" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- table  -->
+
+    <div
+    class="relative overflow-x-auto py-8 px-8 w-fit shadow-md my-10 sm:rounded-lg border border-blue-500 bg-white mx-auto" id="table_parent"
+  >
+  <div class="flex justify-center items-start">
+    <div class="relative max-w-xs mb-6">
+      <label for="hs-table-search" class="sr-only">Search</label>
+      <input
+        type="text"
+        name="hs-table-search"
+        id="hs-table-search"
+        onkeyup="searchFun()"
+        class="p-3 pl-10 block w-full border border-blue-500 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 light:border-blue-700 light:text-gray-400"
+        placeholder="Search for items"
+      />
+      <div
+        class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-4"
+      >
+        <svg
+          class="h-3.5 w-3.5 text-gray-400"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          />
+        </svg>
+      </div>
+    </div>
+    <button
+      type="submit"
+      onclick="formdisplay()"
+      id="addProduct"
+      class="bg-blue-500 text-white rounded-md px-4 py-3 mx-auto mr-0"
+    >
+      Add Product
+    </button>
+  </div>
+    <table
+      class="w-80 text-sm text-left text-gray-500 light:text-gray-400 border border-blue-500 mx-auto"
+      id="myTable"
+    >
+      <thead class="text-xs uppercase bg-blue-500 text-white">
+        <tr>
+          <th scope="col" class="px-6 py-3">No.</th>
+          <th scope="col" class="px-6 py-3">First Name</th>
+          <th scope="col" class="px-6 py-3">Last Name</th>
+          <th scope="col" class="px-6 py-3">Email</th>
+          <th scope="col" class="px-6 py-3">Image</th>
+          <th scope="col" class="px-6 py-3">Edit</th>
+          <th scope="col" class="px-6 py-3">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="showUser"></tbody>
+    </table>
+  </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

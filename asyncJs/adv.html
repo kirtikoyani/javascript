@@ -29,7 +29,7 @@ const getPromise = (s) => {
     });
 }
 getPromise('hjdsh')
-.then(function(){console.log('hi')})
+.then(function(res){console.log('hi',res)})
 .catch(function(){console.log('err')});
 
 console.log(getPromise('hjdsh'));
